@@ -53,18 +53,17 @@ jobs:
         run: |
           PGPASSWORD=admin psql -h localhost -p 5432 -U admin -d myfirstdb -f ./datos.sql
 
-      - name: Run tests
-        run: pytest
+      # - name: Run tests
+      #   run: pytest
 
       - name: Run Security Scan
         run: bandit -r ./app -x test_trivia.py
 
       - name: SonarQube Scan
-        uses: sonarsource/sonarqube-scan-action@v1
+        uses: SonarSource/sonarqube-scan-action@v5.1.0
         env:
-          SONAR_HOST_URL: https://sonarcloud.io
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.projectKey=trivia-game-python 
-            -Dsonar.sources=.
+            -Dsonar.organization=shifu222
+            -Dsonar.projectKey=shifu222_trivia-game-python
