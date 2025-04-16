@@ -7,16 +7,58 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: admin
+          POSTGRES_PASSWORD: admin
+          POSTGRES_DB: myfirstdb
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd="pg_isready -U admin -d myfirstdb"
+          --health-interval=5s
+          --health-timeout=5s
+          --health-retries=5
+
     steps:
       - uses: actions/checkout@v2
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: "3.9"
-      - run: pip install -r requirements.txt
-      - run: pytest
+
+      - name: Set environment variables
+        run: |
+          echo "DB_DATABASE=myfirstdb" >> .env
+          echo "DB_HOST=postgres" >> .env
+          echo "DB_PORT=5432" >> .env
+          echo "DB_USER=admin" >> .env
+          echo "DB_PASSWORD=admin" >> .env
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Wait for PostgreSQL to be ready
+        run: |
+          until pg_isready -h localhost -p 5432 -U admin; do
+            echo "Esperando a la base de datos"
+            sleep 2
+          done
+
+      - name: Execute SQL script
+        run: |
+          PGPASSWORD=admin psql -h localhost -p 5432 -U admin -d myfirstdb -f ./datos.sql
+
+      - name: Run tests
+        run: pytest
+
       - name: Run Security Scan
         run: bandit -r ./app -x test_trivia.py
+
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@v1
         env:
