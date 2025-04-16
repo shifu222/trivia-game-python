@@ -1,3 +1,6 @@
 fastapi[all]
 psycopg2-binary
 pytest
+locust
+bandit
+dotenv
