@@ -145,11 +145,13 @@
 - Se corrigió ruta de `load_dotenv`.  
 - Se agregó `SONAR_HOST_URL` como variable de entorno.
 
+**Commit:** Fix : agrego la organización y el proyect key para la ejecución de Sonar
+
+- Se agregó `Dsonar.organization` y `Dsonar.projectKey` en los args de Sonar  
+
 ---
 
 ### Observaciones
 
-- El test con `pytest` no se ejecuta correctamente en GitHub Actions, pero en el local(uso de docker) funciona correctamente.
-- Se intentó ajustar la configuración del pipeline, sin éxito hasta el momento.  
-- Se identificó un problema con la versión de Java al ejecutar Sonar, persiste incluso tras actualizarla.  
+- El test con `pytest` no se ejecuta correctamente en GitHub Actions, después de estar analizando(debugs) llegué a identificar que el problema ocurre  al intentar conectarse a la base de datos, traté de solucionarlo pero hasta el momento no encuentro la solución. Cabe señalar de que en el local (docker) **sí funciona** .
 - Se retrasó la entrega del proyecto debido a la insistencia de resolver estos errores .
