@@ -12,17 +12,15 @@ services:
       postgres:
         condition: service_healthy 
     volumes:
-      - ./app:/app
+      - .:/code
 
   postgres:
     image: postgres:16
     container_name: postgres
     ports:
       - "5432:5432"
-    environment:
-      - POSTGRES_USER=admin
-      - POSTGRES_PASSWORD=admin
-      - POSTGRES_DB=myfirstdb
+    env_file:
+      - .env
     volumes:
       - pgdata:/var/lib/postgresql/data
       - ./datos.sql:/docker-entrypoint-initdb.d/script.sql
