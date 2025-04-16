@@ -1,0 +1,197 @@
+[
+  {
+    "pregunta": "¿Cuál es la capital de España?",
+    "alternativas": ["Madrid", "Barcelona", "Valencia", "Sevilla"],
+    "respuesta_correcta": "Madrid",
+    "nivel": "facil"
+  },
+  {
+    "pregunta": "¿Cuánto es 2 + 2?",
+    "alternativas": ["3", "4", "5", "6"],
+    "respuesta_correcta": "4",
+    "nivel": "facil"
+  },
+  {
+    "pregunta": "¿De qué color es el cielo en un día despejado?",
+    "alternativas": ["Azul", "Rojo", "Verde", "Gris"],
+    "respuesta_correcta": "Azul",
+    "nivel": "facil"
+  },
+  {
+    "pregunta": "¿Qué animal dice “miau”?",
+    "alternativas": ["Perro", "Gato", "Pájaro", "Vaca"],
+    "respuesta_correcta": "Gato",
+    "nivel": "facil"
+  },
+  {
+    "pregunta": "¿Cuál es el idioma oficial de Perú?",
+    "alternativas": ["Quechua", "Español", "Portugués", "Inglés"],
+    "respuesta_correcta": "Español",
+    "nivel": "facil"
+  },
+  {
+    "pregunta": "¿Qué fruta es amarilla y curva?",
+    "alternativas": ["Manzana", "Banana", "Pera", "Sandía"],
+    "respuesta_correcta": "Banana",
+    "nivel": "facil"
+  },
+  {
+    "pregunta": "¿Cuántos días tiene una semana?",
+    "alternativas": ["5", "6", "7", "8"],
+    "respuesta_correcta": "7",
+    "nivel": "facil"
+  },
+  {
+    "pregunta": "¿Qué planeta es conocido como el planeta rojo?",
+    "alternativas": ["Marte", "Júpiter", "Venus", "Saturno"],
+    "respuesta_correcta": "Marte",
+    "nivel": "facil"
+  },
+  {
+    "pregunta": "¿Qué instrumento tiene teclas blancas y negras?",
+    "alternativas": ["Guitarra", "Violín", "Piano", "Flauta"],
+    "respuesta_correcta": "Piano",
+    "nivel": "facil"
+  },
+  {
+    "pregunta": "¿Qué líquido bebemos más comúnmente?",
+    "alternativas": ["Leche", "Refresco", "Agua", "Jugo"],
+    "respuesta_correcta": "Agua",
+    "nivel": "facil"
+  },
+  {
+    "pregunta": "¿Quién pintó La Mona Lisa?",
+    "alternativas": ["Picasso", "Da Vinci", "Van Gogh", "Rembrandt"],
+    "respuesta_correcta": "Da Vinci",
+    "nivel": "intermedio"
+  },
+  {
+    "pregunta": "¿En qué continente está Egipto?",
+    "alternativas": ["Asia", "Europa", "África", "Oceanía"],
+    "respuesta_correcta": "África",
+    "nivel": "intermedio"
+  },
+  {
+    "pregunta": "¿Cuál es el símbolo químico del oro?",
+    "alternativas": ["Au", "Ag", "Fe", "Hg"],
+    "respuesta_correcta": "Au",
+    "nivel": "intermedio"
+  },
+  {
+    "pregunta": "¿Cuál es el resultado de 12 x 8?",
+    "alternativas": ["96", "88", "108", "100"],
+    "respuesta_correcta": "96",
+    "nivel": "intermedio"
+  },
+  {
+    "pregunta": "¿Quién escribió \"Cien años de soledad\"?",
+    "alternativas": [
+      "Pablo Neruda",
+      "Mario Vargas Llosa",
+      "Gabriel García Márquez",
+      "Isabel Allende"
+    ],
+    "respuesta_correcta": "Gabriel García Márquez",
+    "nivel": "intermedio"
+  },
+  {
+    "pregunta": "¿Qué país tiene forma de bota?",
+    "alternativas": ["Brasil", "Italia", "India", "Grecia"],
+    "respuesta_correcta": "Italia",
+    "nivel": "intermedio"
+  },
+  {
+    "pregunta": "¿Qué gas respiramos para vivir?",
+    "alternativas": ["Oxígeno", "Nitrógeno", "Dióxido de carbono", "Hidrógeno"],
+    "respuesta_correcta": "Oxígeno",
+    "nivel": "intermedio"
+  },
+  {
+    "pregunta": "¿Qué órgano del cuerpo humano bombea sangre?",
+    "alternativas": ["Hígado", "Pulmón", "Cerebro", "Corazón"],
+    "respuesta_correcta": "Corazón",
+    "nivel": "intermedio"
+  },
+  {
+    "pregunta": "¿Cuál es el océano más grande del mundo?",
+    "alternativas": ["Atlántico", "Índico", "Ártico", "Pacífico"],
+    "respuesta_correcta": "Pacífico",
+    "nivel": "intermedio"
+  },
+  {
+    "pregunta": "¿Qué país inventó la pólvora?",
+    "alternativas": ["Japón", "India", "China", "Egipto"],
+    "respuesta_correcta": "China",
+    "nivel": "intermedio"
+  },
+  {
+    "pregunta": "¿En qué año cayó el Imperio Romano de Occidente?",
+    "alternativas": ["476 d.C.", "1453", "1492", "800 d.C."],
+    "respuesta_correcta": "476 d.C.",
+    "nivel": "dificil"
+  },
+  {
+    "pregunta": "¿Cuál es la capital de Mongolia?",
+    "alternativas": ["Ulan Bator", "Tashkent", "Bishkek", "Astana"],
+    "respuesta_correcta": "Ulan Bator",
+    "nivel": "dificil"
+  },
+  {
+    "pregunta": "¿Quién desarrolló la teoría de la relatividad?",
+    "alternativas": [
+      "Isaac Newton",
+      "Albert Einstein",
+      "Galileo Galilei",
+      "Nikola Tesla"
+    ],
+    "respuesta_correcta": "Albert Einstein",
+    "nivel": "dificil"
+  },
+  {
+    "pregunta": "¿Cuál es el río más largo del mundo según estudios recientes?",
+    "alternativas": ["Nilo", "Amazonas", "Yangtsé", "Misisipi"],
+    "respuesta_correcta": "Amazonas",
+    "nivel": "dificil"
+  },
+  {
+    "pregunta": "¿Cuál es el número atómico del Oxígeno?",
+    "alternativas": ["6", "8", "10", "16"],
+    "respuesta_correcta": "8",
+    "nivel": "dificil"
+  },
+  {
+    "pregunta": "¿Qué filósofo escribió \"La República\"?",
+    "alternativas": ["Platón", "Sócrates", "Aristóteles", "Epicuro"],
+    "respuesta_correcta": "Platón",
+    "nivel": "dificil"
+  },
+  {
+    "pregunta": "¿Qué país no pertenece a la Unión Europea?",
+    "alternativas": ["Noruega", "España", "Francia", "Italia"],
+    "respuesta_correcta": "Noruega",
+    "nivel": "dificil"
+  },
+  {
+    "pregunta": "¿Qué unidad se usa para medir la intensidad de la corriente eléctrica?",
+    "alternativas": ["Voltio", "Ohmio", "Amperio", "Watt"],
+    "respuesta_correcta": "Amperio",
+    "nivel": "dificil"
+  },
+  {
+    "pregunta": "¿Qué novela fue escrita por Mary Shelley?",
+    "alternativas": [
+      "Drácula",
+      "Frankenstein",
+      "El extraño caso de Dr. Jekyll y Mr. Hyde",
+      "El retrato de Dorian Gray"
+    ],
+    "respuesta_correcta": "Frankenstein",
+    "nivel": "dificil"
+  },
+  {
+    "pregunta": "¿Qué científico propuso las leyes del movimiento y la gravitación universal?",
+    "alternativas": ["Newton", "Kepler", "Einstein", "Galileo"],
+    "respuesta_correcta": "Newton",
+    "nivel": "dificil"
+  }
+]
