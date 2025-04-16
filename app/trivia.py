@@ -1,5 +1,4 @@
-import os
-import psycopg2
+from app.db import get_cursor
 
 
 class Question:
@@ -31,24 +30,6 @@ class Quiz:
 
     def run_quiz(self):
 
-       # recuperando las variables de entorno para crear la conexión
-        parameters = {
-            "host": os.environ.get("DB_HOST"),
-            "port": os.environ.get("DB_PORT"),
-            "user": os.environ.get("DB_USER"),
-            "password": os.environ.get("DB_PASSWORD"),
-            "database": os.environ.get("DB_DATABASE")
-        }
-
-        try:
-            # crea la conexión
-            conexion = psycopg2.connect(**parameters)
-
-            # crea el cursor
-            cursor = conexion.cursor()
-        except Exception as e:
-            print("Error:", e)
-
         print("************************************")
         print("*     🎉 BIENVENIDO A LA TRIVIA 🎉     *")
         print("************************************")
@@ -74,13 +55,9 @@ class Quiz:
             print("Opción incorrecta")
             return
 
-        cursor.execute("""
-        SELECT pregunta, alternativas, respuesta_correcta
-        FROM preguntas
-        WHERE nivel = %s
-    """, (niveles.get(level),))  # busca las preguntas del nivel elegido en la base de datos
-
-        rows = cursor.fetchall()  # retorna todas las preguntas
+        with get_cursor() as cursor:
+            cursor.execute("""SELECT pregunta, alternativas, respuesta_correcta FROM preguntas WHERE nivel = %s""", (niveles.get(level),))  # busca las preguntas del nivel elegido en la base de datos
+            rows = cursor.fetchall()  # retorna todas las preguntas
 
         for row in rows:  # para cada pregunta
 
@@ -93,8 +70,6 @@ class Quiz:
 
             self.add_question(new_question)  # agrega las preguntas
 
-        cursor.close()  # cierra el cursor
-        conexion.close()  # termina la conexión
 
         question = self.get_next_question()  # recupera la pregunta
 

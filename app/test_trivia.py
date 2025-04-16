@@ -1,5 +1,5 @@
 import pytest
-from trivia import Question,Quiz
+from app.trivia import Question,Quiz
 
 def test_question_correct_answer():
     quiz = Quiz()

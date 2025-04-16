@@ -4,12 +4,13 @@ services:
   app:
     build: .
     container_name: app
-    environment:
-      - POSTGRES_URL_CONNECTION=postgresql://admin:admin@postgres:5432/myfirstdb
+    env_file:
+      - .env
     ports:
       - "3000:3000"
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy 
     volumes:
       - ./app:/app
 
@@ -25,6 +26,11 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
       - ./datos.sql:/docker-entrypoint-initdb.d/script.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d myfirstdb"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
 volumes:
   pgdata:
